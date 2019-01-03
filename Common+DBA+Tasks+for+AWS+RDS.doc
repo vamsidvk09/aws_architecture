@@ -1,0 +1,570 @@
+Message-ID: <1140915472.272867.1546507127381.JavaMail.atlassian@swcoealpcfce01>
+Subject: Exported From Confluence
+MIME-Version: 1.0
+Content-Type: multipart/related; 
+	boundary="----=_Part_272866_1713129304.1546507127380"
+
+------=_Part_272866_1713129304.1546507127380
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///C:/exported.html
+
+<html xmlns:o=3D'urn:schemas-microsoft-com:office:office'
+      xmlns:w=3D'urn:schemas-microsoft-com:office:word'
+      xmlns:v=3D'urn:schemas-microsoft-com:vml'
+      xmlns=3D'urn:w3-org-ns:HTML'>
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+    <title>Common DBA Tasks for AWS RDS</title>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:TargetScreenSize>1024x640</o:TargetScreenSize>
+            <o:PixelsPerInch>72</o:PixelsPerInch>
+            <o:AllowPNG/>
+        </o:OfficeDocumentSettings>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>90</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+                <!--
+        @page Section1 {
+            size: 8.5in 11.0in;
+            margin: 1.0in;
+            mso-header-margin: .5in;
+            mso-footer-margin: .5in;
+            mso-paper-source: 0;
+        }
+
+        table {
+            border: solid 1px;
+            border-collapse: collapse;
+        }
+
+        table td, table th {
+            border: solid 1px;
+            padding: 5px;
+        }
+
+        td {
+            page-break-inside: avoid;
+        }
+
+        tr {
+            page-break-after: avoid;
+        }
+
+        div.Section1 {
+            page: Section1;
+        }
+
+        /* Confluence print stylesheet. Common to all themes for print medi=
+a */
+/* Full of !important until we improve batching for print CSS */
+
+@media print {
+    #main {
+        padding-bottom: 1em !important; /* The default padding of 6em is to=
+o much for printouts */
+    }
+
+    body {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        font-size: 10pt;
+        line-height: 1.2;
+    }
+
+    body, #full-height-container, #main, #page, #content, .has-personal-sid=
+ebar #content {
+        background: #fff !important;
+        color: #000 !important;
+        border: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    a, a:link, a:visited, a:focus, a:hover, a:active {
+        color: #000;
+    }
+
+    #content h1,
+    #content h2,
+    #content h3,
+    #content h4,
+    #content h5,
+    #content h6 {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        page-break-after: avoid;
+    }
+
+    pre {
+        font-family: Monaco, "Courier New", monospace;
+    }
+
+    #header,
+    .aui-header-inner,
+    #navigation,
+    #sidebar,
+    .sidebar,
+    #personal-info-sidebar,
+    .ia-fixed-sidebar,
+    .page-actions,
+    .navmenu,
+    .ajs-menu-bar,
+    .noprint,
+    .inline-control-link,
+    .inline-control-link a,
+    a.show-labels-editor,
+    .global-comment-actions,
+    .comment-actions,
+    .quick-comment-container,
+    #addcomment {
+        display: none !important;
+    }
+
+    /* CONF-28544 cannot print multiple pages in IE */
+    #splitter-content {
+        position: relative !important;
+    }
+
+    .comment .date::before {
+        content: none !important; /* remove middot for print view */
+    }
+
+    h1.pagetitle img {
+        height: auto;
+        width: auto;
+    }
+
+    .print-only {
+        display: block;
+    }
+
+    #footer {
+        position: relative !important; /* CONF-17506 Place the footer at en=
+d of the content */
+        margin: 0;
+        padding: 0;
+        background: none;
+        clear: both;
+    }
+
+    #poweredby {
+        border-top: none;
+        background: none;
+    }
+
+    #poweredby li.print-only {
+        display: list-item;
+        font-style: italic;
+    }
+
+    #poweredby li.noprint {
+        display: none;
+    }
+
+    /* no width controls in print */
+    .wiki-content .table-wrap,
+    .wiki-content p,
+    .panel .codeContent,
+    .panel .codeContent pre,
+    .image-wrap {
+        overflow: visible !important;
+    }
+
+    /* TODO - should this work? */
+    #children-section,
+    #comments-section .comment,
+    #comments-section .comment .comment-body,
+    #comments-section .comment .comment-content,
+    #comments-section .comment p {
+        page-break-inside: avoid;
+    }
+
+    #page-children a {
+        text-decoration: none;
+    }
+
+    /**
+     hide twixies
+
+     the specificity here is a hack because print styles
+     are getting loaded before the base styles. */
+    #comments-section.pageSection .section-header,
+    #comments-section.pageSection .section-title,
+    #children-section.pageSection .section-header,
+    #children-section.pageSection .section-title,
+    .children-show-hide {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .children-show-hide.icon {
+        display: none;
+    }
+
+    /* personal sidebar */
+    .has-personal-sidebar #content {
+        margin-right: 0px;
+    }
+
+    .has-personal-sidebar #content .pageSection {
+        margin-right: 0px;
+    }
+
+    .no-print, .no-print * {
+        display: none !important;
+    }
+}
+-->
+    </style>
+</head>
+<body>
+    <h1>Common DBA Tasks for AWS RDS</h1>
+    <div class=3D"Section1">
+        <p><span style=3D"font-size: 20.0px;"><style type=3D"text/css">/*<!=
+[CDATA[*/
+div.rbtoc1546507127204 {padding: 0px;}
+div.rbtoc1546507127204 ul {list-style: disc;margin-left: 0px;}
+div.rbtoc1546507127204 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style></span></p>
+<div class=3D"toc-macro rbtoc1546507127204">=20
+<ul class=3D"toc-indentation">=20
+<li><a href=3D"#CommonDBATasksforAWSRDS-Maintenanceactivities">Maintenance =
+activities</a>=20
+<ul class=3D"toc-indentation">=20
+<li><a href=3D"#CommonDBATasksforAWSRDS-Maintenance-Ad-hocbackupoftheServic=
+e">Maintenance - Ad-hoc backup of the Service</a></li>=20
+<li><a href=3D"#CommonDBATasksforAWSRDS-Maintenance=E2=80=93IncreaseDiskSto=
+rage">Maintenance =E2=80=93 Increase Disk Storage</a></li>=20
+<li><a href=3D"#CommonDBATasksforAWSRDS-Maintenance=E2=80=93ChangeTypeofDis=
+kStorage">Maintenance =E2=80=93 Change Type of Disk Storage</a></li>=20
+<li><a href=3D"#CommonDBATasksforAWSRDS-Maintenance=E2=80=93Modifyingnumber=
+ofPIOPS">Maintenance =E2=80=93 Modifying number of PIOPS</a></li>=20
+<li><a href=3D"#CommonDBATasksforAWSRDS-Maintenance=E2=80=93AdjustMemory(ch=
+angeinstanceclass/type/size)">Maintenance =E2=80=93 Adjust Memory (change i=
+nstance class/type/size)</a></li>=20
+<li><a href=3D"#CommonDBATasksforAWSRDS-Maintenance=E2=80=93AdjustCPU(chang=
+einstanceclass/type/size)">Maintenance =E2=80=93 Adjust CPU (change instanc=
+e class/type/size)</a></li>=20
+<li><a href=3D"#CommonDBATasksforAWSRDS-Maintenance-DecommissiontheService"=
+>Maintenance - Decommission the Service</a></li>=20
+</ul> </li>=20
+<li><a href=3D"#CommonDBATasksforAWSRDS-Buildtasks">Build tasks</a>=20
+<ul class=3D"toc-indentation">=20
+<li><a href=3D"#CommonDBATasksforAWSRDS-RestoretheServicefromSnapshot">Rest=
+ore the Service from Snapshot</a></li>=20
+<li><a href=3D"#CommonDBATasksforAWSRDS-RestoretheServicetoPoint-In-Time">R=
+estore the Service to Point-In-Time</a></li>=20
+<li><a href=3D"#CommonDBATasksforAWSRDS-DatabaseMonitoringandAlerting">Data=
+base Monitoring and Alerting</a></li>=20
+<li><a href=3D"#CommonDBATasksforAWSRDS-OperationalHandOver-HandOverToRun."=
+>Operational Hand Over - Hand Over To Run.</a></li>=20
+</ul> </li>=20
+<li><a href=3D"#CommonDBATasksforAWSRDS-Others">Others</a>=20
+<ul class=3D"toc-indentation">=20
+<li><a href=3D"#CommonDBATasksforAWSRDS-ModifyDatabase=E2=80=93ApplicationM=
+aintenance">Modify Database =E2=80=93 Application Maintenance</a></li>=20
+</ul> </li>=20
+</ul>=20
+</div>
+<p></p>
+<h1 id=3D"CommonDBATasksforAWSRDS-Maintenanceactivities"><span style=3D"fon=
+t-size: 20.0px;">Maintenance activities</span></h1>
+<div class=3D"confluence-information-macro confluence-information-macro-inf=
+ormation">
+<p class=3D"title">Scope</p>
+<span class=3D"aui-icon aui-icon-small aui-iconfont-info confluence-informa=
+tion-macro-icon"></span>
+<div class=3D"confluence-information-macro-body">
+<p>The maintenance activities outlined below are performed by Global Databa=
+se Administration (DBA) employees of the GEHC DET DBA team, as well as thir=
+d-party contractors authorized by them. The procedures are performed in the=
+ same manner in all Oracle environments in AWS Classic VPCs (development, t=
+est, stage, production).</p>
+<p>Implementer of the activities must have access to one of tools allowing =
+execution of task:</p>
+<ul style=3D"list-style-type: square;">
+<li>Amazon RDS Management Console</li>
+<li><span style=3D"color: rgb(68,68,68);">Amazon RDS API</span></li>
+<li><span style=3D"color: rgb(68,68,68);"><span style=3D"color: rgb(68,68,6=
+8);">AWS CLI</span><br></span></li>
+</ul>
+</div>
+</div>
+<h2 id=3D"CommonDBATasksforAWSRDS-Maintenance-Ad-hocbackupoftheService"><sp=
+an style=3D"font-size: 20.0px;">Maintenance - Ad-hoc backup of the Service<=
+/span></h2>
+<p>The ad-hoc backup (DB Snapshot) does not incur an outage, but taking it&=
+nbsp;<span style=3D"color: rgb(68,68,68);">on a Single-AZ DB instance resul=
+ts in a brief I/O suspension, that can last from a few seconds to a few min=
+utes, depending on the size and class of your DB instance.&nbsp;<span style=
+=3D"color: rgb(68,68,68);">Since the snapshot includes the entire storage v=
+olume, the size of files, such as temporary files, also affects the amount =
+of time it takes to create the snapshot.</span> Multi-AZ DB instances are n=
+ot affected by this I/O suspension since the backup is taken on the standby=
+.<br></span></p>
+<p>From the AWS RDS Console</p>
+<p style=3D"margin-left: 30.0px;">1. Select the database service to be back=
+ed up.<br>2. Select Actions -&gt; Create Snapshot<br>3. Enter Snapshot Name=
+ and press Take Snapshot</p>
+<p>When the snapshot has been created the console will display the snapshot=
+ page with the snapshot status set to available.</p>
+<p>Screenshot of snapshot properties or output of AWS API call (with snapsh=
+ot's properties) is sufficient objective evidence.</p>
+<h2 id=3D"CommonDBATasksforAWSRDS-Maintenance=E2=80=93IncreaseDiskStorage">=
+Maintenance =E2=80=93 Increase Disk Storage</h2>
+<p>Normally, increasing storage size is online process (no outage), that ta=
+kes some time. <span style=3D"color: rgb(68,68,68);">In most cases, scaling=
+ storage doesn't degrade performance of the server.&nbsp;</span>But, if the=
+re are other changes queued for application to RDS instance (check Pending =
+Modifications in properties of DB), then outage can occur. In such case sch=
+edule outage with application team.<br><span style=3D"color: rgb(68,68,68);=
+">When you increase storage it must be by at least 10 %. If you try to incr=
+ease by less than 10 % you see an error.</span><br><span style=3D"color: rg=
+b(68,68,68);">After you modify the storage size for a DB instance, the stat=
+us of the DB instance is "storage-optimization".</span><span style=3D"color=
+: rgb(68,68,68);">&nbsp;The DB instance is fully operational after a storag=
+e modification. However, you can't make further storage modifications for e=
+ither six (6) hours or while the DB instance status is the "storage-optimiz=
+ation", whichever is longer.</span><br><span style=3D"color: rgb(68,68,68);=
+">If you intend to change type of disk storage about the time of this resiz=
+ing, do the change of disk type together with the resizing (on the same Con=
+sole's page). Changing type incurs an outage. Read paragraph for changing t=
+ype of disk storage before making a change.</span></p>
+<p>Note! It is not possible to shrink RDS storage.</p>
+<div class=3D"confluence-information-macro confluence-information-macro-war=
+ning">
+<p class=3D"title">MS SQL server</p>
+<span class=3D"aui-icon aui-icon-small aui-iconfont-error confluence-inform=
+ation-macro-icon"></span>
+<div class=3D"confluence-information-macro-body">
+<p><span style=3D"color: rgb(68,68,68);">If you have a SQL Server DB instan=
+ce and have not modified the storage configuration since November 2017, you=
+ might experience a short outage of a few minutes when you modify your DB i=
+nstance to increase the allocated storage. After the outage, the DB instanc=
+e is online but in the storage-optimization state. Performance might be deg=
+raded during storage optimization.</span></p>
+</div>
+</div>
+<p>From the AWS RDS Console</p>
+<p style=3D"margin-left: 30.0px;">1. Select the database service, which req=
+uires additional storage.<br>2. Select Instance Actions -&gt; Modify<br>3. =
+Adjust the Allocated Storage to the new amount (optionally change type of d=
+isk, if required).<br>4.&nbsp;Press Continue&nbsp;<br>5. Optionally select =
+Apply Immediately. Otherwise the change will be implemented during the next=
+ maintenance window.<br>6.&nbsp;Press Modify DB Instance</p>
+<p>From CloudWatch Console</p>
+<ol>
+<li>Update alarm settings for "FreeStorageSpace" metrics as defined in&nbsp=
+;<a href=3D"https://ge.ent.box.com/file/30096096737" class=3D"external-link=
+" rel=3D"nofollow">https://ge.ent.box.com/file/30096096737</a>. Follow inst=
+ruction in&nbsp;<a href=3D"/devspace/pages/viewpage.action?pageId=3D1083999=
+936">Amazon RDS Database =E2=80=93 Monitoring &amp; Alerts</a>.</li>
+</ol>
+<p>Before and after screenshot of RDS instance's properties or output of AW=
+S API call, that shows new size is sufficient objective evidence.</p>
+<h2 id=3D"CommonDBATasksforAWSRDS-Maintenance=E2=80=93ChangeTypeofDiskStora=
+ge">Maintenance =E2=80=93 Change Type of Disk Storage</h2>
+<p>Changing storage type results in an immediate, short outage when a disk =
+conversion happens.&nbsp;<span style=3D"color: rgb(68,68,68);">Then, migrat=
+ion of data to new volume type occurs, that longevity depends on several fa=
+ctors such as database load, storage size, storage type, and amount of IOPS=
+ provisioned (if any).&nbsp;<span style=3D"color: rgb(68,68,68);">Performan=
+ce can be impacted until migration completed.&nbsp;</span></span>If there a=
+re other changes queued for application to RDS instance (check Pending Modi=
+fications in properties of DB), then outage can get extended additionally.&=
+nbsp;Schedule outage with application team.&nbsp;</p>
+<p>Note! Provisioned IOPS storage requires disk size of 100GB or more and a=
+t least 1000 IOPS. If you must increase size of disk to enable PIOPS, then =
+do it at the same time as change of type&nbsp;<span style=3D"color: rgb(68,=
+68,68);">(on the same Console's page).</span></p>
+<p>From the AWS RDS Console.</p>
+<p style=3D"margin-left: 30.0px;">1. Select the database service, which req=
+uires additional storage.<br>2. Select Instance Actions -&gt; Modify<br>3. =
+Change type of disk storage (optionally increase size, if required)<br>4.&n=
+bsp;Press Continue&nbsp;<br>5. Optionally select Apply Immediately. Otherwi=
+se the change will be implemented during the next maintenance window.<br>6.=
+&nbsp;Press Modify DB Instance</p>
+<p>Before and after screenshot of RDS instance's properties or output of AW=
+S API call, that shows new disk type is sufficient objective evidence.</p>
+<h2 id=3D"CommonDBATasksforAWSRDS-Maintenance=E2=80=93ModifyingnumberofPIOP=
+S">Maintenance =E2=80=93 Modifying number of PIOPS</h2>
+<p>There is no outage with regards to changing number of PIOPS. If&nbsp;the=
+re are other changes queued for application to RDS instance&nbsp;(check Pen=
+ding Modifications in properties of DB), then outage can occur. In such cas=
+e schedule outage with application team.</p>
+<p>From the AWS RDS Console.</p>
+<p style=3D"margin-left: 30.0px;">1. Select the database service, which req=
+uires additional storage.<br>2. Select Instance Actions -&gt; Modify<br>3. =
+Change number of IOs<br>4.&nbsp;Press Continue&nbsp;<br>5. Optionally selec=
+t Apply Immediately. Otherwise the change will be implemented during the ne=
+xt maintenance window.<br>6.&nbsp;Press Modify DB Instance</p>
+<p>Note! Minimum 1000 IOs must be provisioned for storage of Provisioned IO=
+PS type.</p>
+<p>Before and after screenshot of RDS instance's properties or output of AW=
+S API call, that shows number of PIOPS is sufficient objective evidence.</p=
+>
+<h2 id=3D"CommonDBATasksforAWSRDS-Maintenance=E2=80=93AdjustMemory(changein=
+stanceclass/type/size)">Maintenance =E2=80=93 Adjust Memory (change instanc=
+e class/type/size)</h2>
+<p>Changing class of RDS instance results in an outage. Please schedule it =
+with&nbsp;application team.</p>
+<p>From the AWS RDS Console</p>
+<p style=3D"margin-left: 30.0px;">1. Select the database service which requ=
+ires additional memory.<br>2. Select Instance Actions -&gt; Modify<br>3. Ad=
+just the DB Instance Class to the new value. Eg db.m3.medium to db.m4.large=
+<br>4. Optionally select Apply Immediately. Otherwise the change will be im=
+plemented during the next maintenance window<br>5. Press Continue and the M=
+odify DB Instance.</p>
+<p>From CloudWatch Console</p>
+<ol>
+<li>Update alarm settings for metrics:<br>"<span style=3D"color: rgb(0,0,0)=
+;">FreeableMemory",<br></span>"SwapUsage" (if applicable to database techno=
+logy)<br>as defined in&nbsp;<a href=3D"https://ge.ent.box.com/file/30096096=
+737" class=3D"external-link" rel=3D"nofollow">https://ge.ent.box.com/file/3=
+0096096737</a>. Follow instruction in&nbsp;<a href=3D"/devspace/pages/viewp=
+age.action?pageId=3D1083999936">Amazon RDS Database =E2=80=93 Monitoring &a=
+mp; Alerts</a>.</li>
+</ol>
+<p>Before and after screenshot of RDS instance's properties or output of AW=
+S API call, that shows instance class (type/size) is sufficient objective e=
+vidence.</p>
+<h2 id=3D"CommonDBATasksforAWSRDS-Maintenance=E2=80=93AdjustCPU(changeinsta=
+nceclass/type/size)">Maintenance =E2=80=93 Adjust CPU (change instance clas=
+s/type/size)</h2>
+<p>Changing class of RDS instance results in an outage. Please schedule it =
+with&nbsp;application team.</p>
+<p>From the AWS RDS Console</p>
+<p style=3D"margin-left: 30.0px;">1. Select the database service which requ=
+ires additional CPU.<br>2. Select Instance Actions -&gt; Modify<br>3. Adjus=
+t the DB Instance Class to the new value. Eg db.m3.medium to db.m4.large<br=
+>4. Optionally select Apply Immediately. Otherwise the change will be imple=
+mented during the next maintenance window<br>5. Press Continue and the Modi=
+fy DB Instance</p>
+<p>If Memory size was changed in result of CPU modifications, then from Clo=
+udWatch Console</p>
+<ol>
+<li>Update alarm settings for metrics:<br>"<span style=3D"color: rgb(0,0,0)=
+;">FreeableMemory",<br></span>"SwapUsage" (if applicable to database techno=
+logy)<br>as defined in&nbsp;<a href=3D"https://ge.ent.box.com/file/30096096=
+737" class=3D"external-link" rel=3D"nofollow">https://ge.ent.box.com/file/3=
+0096096737</a>. Follow instruction in&nbsp;<a href=3D"/devspace/pages/viewp=
+age.action?pageId=3D1083999936">Amazon RDS Database =E2=80=93 Monitoring &a=
+mp; Alerts</a>.</li>
+</ol>
+<p>Before and after screenshot of RDS instance's properties or output of AW=
+S API call, that shows instance class (type/size) is sufficient objective e=
+vidence.</p>
+<h2 id=3D"CommonDBATasksforAWSRDS-Maintenance-DecommissiontheService">Maint=
+enance - Decommission the Service</h2>
+<p>Once the AWS RDS service reaches End of Life it should be decommissioned=
+ from RDS. The following steps will remove the database service from AWS.</=
+p>
+<p style=3D"margin-left: 30.0px;">1. Contact the DBA Run team, that the ser=
+vice is to be decommissioned.<br>2. Follow the decommissioning database job=
+ aid DOC1399304. Not all steps are required as some refer to databases on s=
+hared physical servers.<br>3. In the Scalr console, select the database to =
+be removed. Select Instance Actions -&gt; Delete. Choose whether a final sn=
+apshot is required (recommended) and press Delete.<br>4. De-install the CI.=
+ Refer to the Confluence article for CI for cloud databases: &nbsp;<a href=
+=3D"https://devcloud.swcoe.ge.com/devspace/x/SYiCQ" rel=3D"nofollow">Create=
+ Database CI</a>. &nbsp;Follow the instructions for Removing/De-installing =
+existing Configuration Items (CI) in CMDB.</p>
+<h1 id=3D"CommonDBATasksforAWSRDS-Buildtasks">Build tasks</h1>
+<h2 id=3D"CommonDBATasksforAWSRDS-RestoretheServicefromSnapshot">Restore th=
+e Service from Snapshot</h2>
+<p>From the AWS RDS Console.</p>
+<p>Select Snapshots and then select the snapshot of the database to be rest=
+ored. In Actions menu select Restore Snapshot.</p>
+<ol>
+<li>Complete the Restore DB Instance page by following technology-specific =
+standard:</li>
+</ol>
+<ul>
+<li><a href=3D"/devspace/display/VCVGV/Oracle+-+RDS+Standards+and+Informati=
+on">Oracle - RDS Standards and Information</a></li>
+<li><a href=3D"/devspace/display/VCVGV/MS+SQL+Server%3A++Standards+and+Info=
+rmation">MS SQL Server: Standards and Information</a></li>
+<li><a href=3D"/devspace/display/VCVGV/MySQL-+RDS+Standards+and+Information=
+">MySQL- RDS Standards and Information</a></li>
+<li><a href=3D"/devspace/display/VCVGV/PostgreSQL+-+RDS+Standards+and+Infor=
+mation">PostgreSQL - RDS Standards and Information<br></a>Select Restore DB=
+ Instance to start the restore.<br>When the Instance Status changes from cr=
+eating to modifying to available, the restore is complete.&nbsp;</li>
+</ul>
+<p style=3D"margin-left: 30.0px;">2. Some options/settings can be set only =
+after restore is complete.<br>Choose just restored RDS database, click Modi=
+fy button. Use above pages for the&nbsp;technology-specific standards to ad=
+just database&nbsp;to be compliant with GEHC standard. Finally select "Appl=
+y immediately" option and submit changes.</p>
+<p style=3D"margin-left: 30.0px;">3. Review build JA and HOTR process to co=
+mplete new database build.</p>
+<h2 id=3D"CommonDBATasksforAWSRDS-RestoretheServicetoPoint-In-Time">Restore=
+ the Service to Point-In-Time</h2>
+<p>From the AWS RDS Console.</p>
+<p>Select the Instance to be restored to a Point-in-time<br>In the Instance=
+ Actions drop down select Restore to Point in Time.</p>
+<p style=3D"margin-left: 30.0px;">1. Enter the Date and Time to restore to.=
+<br>2. Complete the Restore DB Instance page by following technology-specif=
+ic standard:</p>
+<ul>
+<li><a href=3D"/devspace/display/VCVGV/Oracle+-+RDS+Standards+and+Informati=
+on">Oracle - RDS Standards and Information</a></li>
+<li><a href=3D"/devspace/display/VCVGV/MS+SQL+Server%3A++Standards+and+Info=
+rmation">MS SQL Server: Standards and Information</a></li>
+<li><a href=3D"/devspace/display/VCVGV/MySQL-+RDS+Standards+and+Information=
+">MySQL- RDS Standards and Information</a></li>
+<li><a href=3D"/devspace/display/VCVGV/PostgreSQL+-+RDS+Standards+and+Infor=
+mation">PostgreSQL - RDS Standards and Information<br></a>Select Restore DB=
+ Instance to start the restore.<br>When the Instance Status changes from cr=
+eating to modifying to available the restore is complete.&nbsp;</li>
+</ul>
+<p style=3D"margin-left: 30.0px;">3. Some options/settings can be set only =
+after restore is complete. <br>Choose just restored RDS database, click Mod=
+ify button. Use above pages for the&nbsp;technology-specific standards to a=
+djust database&nbsp;to be compliant with GEHC standard. Finally select "App=
+ly immediately" option and submit changes.</p>
+<p style=3D"margin-left: 30.0px;">4. Review build JA and HOTR process to co=
+mplete new database build.</p>
+<h2 id=3D"CommonDBATasksforAWSRDS-DatabaseMonitoringandAlerting">Database M=
+onitoring and Alerting</h2>
+<p>To set up RDS database monitoring and alerting follow the instructions i=
+n these documents:<br>AWS RDS =E2=80=93 Instance Events :&nbsp;<br><a href=
+=3D"https://devcloud.swcoe.ge.com/devspace/display/VCVGV/Amazon+RDS+Instanc=
+e+Events" rel=3D"nofollow">https://devcloud.swcoe.ge.com/devspace/display/V=
+CVGV/Amazon+RDS+Instance+Events</a><br>AWS RDS Monitoring:&nbsp;<br><a rel=
+=3D"nofollow" href=3D"https://devcloud.swcoe.ge.com/devspace/pages/viewpage=
+.action?pageId=3D1083999936">https://devcloud.swcoe.ge.com/devspace/pages/v=
+iewpage.action?pageId=3D1083999936</a></p>
+<h2 id=3D"CommonDBATasksforAWSRDS-OperationalHandOver-HandOverToRun.">Opera=
+tional Hand Over - Hand Over To Run.</h2>
+<p>On completing the design and build phases of database provisioning the s=
+ervice is handed over to the DBA Run teams using the Hand Over To Run proce=
+ss.<br>Follow the process in&nbsp;<a href=3D"https://devcloud.swcoe.ge.com/=
+devspace/pages/viewpage.action?pageId=3D1125826228" rel=3D"nofollow">OpenSo=
+urce RDS: Hand Over To Run Tasks (HOTR)</a>&nbsp;or&nbsp;<a href=3D"https:/=
+/devcloud.swcoe.ge.com/devspace/pages/viewpage.action?pageId=3D1127483449#O=
+racle-Hand-Over-To-RunTasks(HOTR)-I.HOTRChecklistforRDSBuilds" rel=3D"nofol=
+low">HOTR Checklist for RDS Builds</a>&nbsp;to complete the handover to run=
+ to the operations team.</p>
+<h1 id=3D"CommonDBATasksforAWSRDS-Others">Others</h1>
+<h2 id=3D"CommonDBATasksforAWSRDS-ModifyDatabase=E2=80=93ApplicationMainten=
+ance">Modify Database =E2=80=93 Application Maintenance</h2>
+<p>It is recommended to backup the database before making changes.<br>Acces=
+s the RDS database service with client tool.&nbsp;<br>Execute the SQL comma=
+nds to make the required changes to the database.</p>
+    </div>
+</body>
+</html>
+------=_Part_272866_1713129304.1546507127380--

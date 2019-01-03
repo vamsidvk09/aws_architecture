@@ -1,0 +1,370 @@
+Message-ID: <1067200288.272954.1546507138055.JavaMail.atlassian@swcoealpcfce01>
+Subject: Exported From Confluence
+MIME-Version: 1.0
+Content-Type: multipart/related; 
+	boundary="----=_Part_272953_1773889600.1546507138055"
+
+------=_Part_272953_1773889600.1546507138055
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///C:/exported.html
+
+<html xmlns:o=3D'urn:schemas-microsoft-com:office:office'
+      xmlns:w=3D'urn:schemas-microsoft-com:office:word'
+      xmlns:v=3D'urn:schemas-microsoft-com:vml'
+      xmlns=3D'urn:w3-org-ns:HTML'>
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+    <title>DBA - Oracle to Oracle migration from OnPrem to AWS RDS</title>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:TargetScreenSize>1024x640</o:TargetScreenSize>
+            <o:PixelsPerInch>72</o:PixelsPerInch>
+            <o:AllowPNG/>
+        </o:OfficeDocumentSettings>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>90</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+                <!--
+        @page Section1 {
+            size: 8.5in 11.0in;
+            margin: 1.0in;
+            mso-header-margin: .5in;
+            mso-footer-margin: .5in;
+            mso-paper-source: 0;
+        }
+
+        table {
+            border: solid 1px;
+            border-collapse: collapse;
+        }
+
+        table td, table th {
+            border: solid 1px;
+            padding: 5px;
+        }
+
+        td {
+            page-break-inside: avoid;
+        }
+
+        tr {
+            page-break-after: avoid;
+        }
+
+        div.Section1 {
+            page: Section1;
+        }
+
+        /* Confluence print stylesheet. Common to all themes for print medi=
+a */
+/* Full of !important until we improve batching for print CSS */
+
+@media print {
+    #main {
+        padding-bottom: 1em !important; /* The default padding of 6em is to=
+o much for printouts */
+    }
+
+    body {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        font-size: 10pt;
+        line-height: 1.2;
+    }
+
+    body, #full-height-container, #main, #page, #content, .has-personal-sid=
+ebar #content {
+        background: #fff !important;
+        color: #000 !important;
+        border: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    a, a:link, a:visited, a:focus, a:hover, a:active {
+        color: #000;
+    }
+
+    #content h1,
+    #content h2,
+    #content h3,
+    #content h4,
+    #content h5,
+    #content h6 {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        page-break-after: avoid;
+    }
+
+    pre {
+        font-family: Monaco, "Courier New", monospace;
+    }
+
+    #header,
+    .aui-header-inner,
+    #navigation,
+    #sidebar,
+    .sidebar,
+    #personal-info-sidebar,
+    .ia-fixed-sidebar,
+    .page-actions,
+    .navmenu,
+    .ajs-menu-bar,
+    .noprint,
+    .inline-control-link,
+    .inline-control-link a,
+    a.show-labels-editor,
+    .global-comment-actions,
+    .comment-actions,
+    .quick-comment-container,
+    #addcomment {
+        display: none !important;
+    }
+
+    /* CONF-28544 cannot print multiple pages in IE */
+    #splitter-content {
+        position: relative !important;
+    }
+
+    .comment .date::before {
+        content: none !important; /* remove middot for print view */
+    }
+
+    h1.pagetitle img {
+        height: auto;
+        width: auto;
+    }
+
+    .print-only {
+        display: block;
+    }
+
+    #footer {
+        position: relative !important; /* CONF-17506 Place the footer at en=
+d of the content */
+        margin: 0;
+        padding: 0;
+        background: none;
+        clear: both;
+    }
+
+    #poweredby {
+        border-top: none;
+        background: none;
+    }
+
+    #poweredby li.print-only {
+        display: list-item;
+        font-style: italic;
+    }
+
+    #poweredby li.noprint {
+        display: none;
+    }
+
+    /* no width controls in print */
+    .wiki-content .table-wrap,
+    .wiki-content p,
+    .panel .codeContent,
+    .panel .codeContent pre,
+    .image-wrap {
+        overflow: visible !important;
+    }
+
+    /* TODO - should this work? */
+    #children-section,
+    #comments-section .comment,
+    #comments-section .comment .comment-body,
+    #comments-section .comment .comment-content,
+    #comments-section .comment p {
+        page-break-inside: avoid;
+    }
+
+    #page-children a {
+        text-decoration: none;
+    }
+
+    /**
+     hide twixies
+
+     the specificity here is a hack because print styles
+     are getting loaded before the base styles. */
+    #comments-section.pageSection .section-header,
+    #comments-section.pageSection .section-title,
+    #children-section.pageSection .section-header,
+    #children-section.pageSection .section-title,
+    .children-show-hide {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .children-show-hide.icon {
+        display: none;
+    }
+
+    /* personal sidebar */
+    .has-personal-sidebar #content {
+        margin-right: 0px;
+    }
+
+    .has-personal-sidebar #content .pageSection {
+        margin-right: 0px;
+    }
+
+    .no-print, .no-print * {
+        display: none !important;
+    }
+}
+-->
+    </style>
+</head>
+<body>
+    <h1>DBA - Oracle to Oracle migration from OnPrem to AWS RDS</h1>
+    <div class=3D"Section1">
+        <h1 id=3D"DBA-OracletoOraclemigrationfromOnPremtoAWSRDS-Pre-Requisi=
+tes"><u>Pre-Requisites</u>&nbsp;</h1>
+<p><br></p>
+<ul>
+<li>Availability of an AWS EC2 datamover instance in the target AWS VPC</li=
+>
+<li>Oracle RDBMS server &amp; client s/w installed on AWS EC2 datamover ins=
+tance</li>
+<li>TNS net service entry for Target AWS RDS instance should be added to tn=
+snames.ora file on the AWS EC2 datamover server</li>
+<li>DBA Credentials to login to target (AWS RDS) and source (on-prem)</li>
+<li>Availability of sufficient filesystem space on datamover&nbsp; AWS EC2 =
+instance and target AWS RDS instance to host the export or expdp dump files=
+</li>
+<li>Availability of sufficient space in target RDS instance to import the c=
+ontents of expdp/exp dump files</li>
+<li>Validate all required features and constructs (such as tablespaces) are=
+ in place at the target AWS RDS instance</li>
+</ul>
+<h1 id=3D"DBA-OracletoOraclemigrationfromOnPremtoAWSRDS-MethodI-UsingExport=
+Datapump(expdp)"><u><span style=3D"color: rgb(0,51,102);">Method I - Using =
+Export Datapump (expdp)</span></u></h1>
+<div class=3D"table-wrap">
+<table class=3D"confluenceTable">
+<colgroup>
+<col>=20
+</colgroup>
+<tbody>
+<tr>
+<td class=3D"confluenceTd">Step 1. Take expdp backup of DB/Schema to be mig=
+rated on on-prem server&nbsp;</td>
+</tr>
+<tr>
+<td class=3D"confluenceTd">Step 2. Copy expdp backup files to an oracle dir=
+ectory on oracle instance on datamover server</td>
+</tr>
+<tr>
+<td class=3D"confluenceTd">Step 3. Establish DB link between target AWS RDS=
+ instance and oracle instance on datamover server (if expdp method is used)=
+</td>
+</tr>
+<tr>
+<td class=3D"confluenceTd">Step 4. Transfer expdp backup files from oracle =
+directory on oracle instance on AWS EC2 datamover server to data pump direc=
+tory on target AWS RDS instance (using DBMS_FILE_TRANSFER package)</td>
+</tr>
+<tr>
+<td class=3D"confluenceTd">Step 5. Use impdp to import contents of&nbsp; ex=
+pdp backup files into schema on target AWS RDS instance</td>
+</tr>
+<tr>
+<td class=3D"confluenceTd">Step 6. Check with application team to verify th=
+e data migration was successful</td>
+</tr>
+<tr>
+<td class=3D"confluenceTd">Step 7. Validate object count and status on targ=
+et AWS RDS instance&nbsp;</td>
+</tr>
+<tr>
+<td class=3D"confluenceTd">Step 8. Remove expdp backup files from data pump=
+ directory on target AWS RDS instance (using UTL_FILE.FREMOVE package)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><u style=3D"font-size: 24.0px;"><span style=3D"color: rgb(0,51,102);"><b=
+r>Method 2 - Using Export (exp)</span></u></p>
+<div class=3D"table-wrap">
+<table class=3D"confluenceTable">
+<colgroup>
+<col>=20
+</colgroup>
+<tbody>
+<tr>
+<td class=3D"confluenceTd">Step 1. Take export dump backup of DB/Schema to =
+be migrated on on-prem server&nbsp;</td>
+</tr>
+<tr>
+<td class=3D"confluenceTd">Step 2. Copy export dump backup files to an orac=
+le directory on oracle instance on AWS EC2 datamover server</td>
+</tr>
+<tr>
+<td class=3D"confluenceTd">Step 3. Use imp to import contents of&nbsp; expo=
+rt dump backup files into schema on target AWS RDS instance</td>
+</tr>
+<tr>
+<td class=3D"confluenceTd">Step 4. Check with application team to verify th=
+e data migration was successful</td>
+</tr>
+<tr>
+<td class=3D"confluenceTd">Step 5. Validate object count and status on targ=
+et AWS RDS instance&nbsp;</td>
+</tr>
+<tr>
+<td class=3D"confluenceTd">Step 6. Remove export dump backup files from dat=
+amover server</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id=3D"DBA-OracletoOraclemigrationfromOnPremtoAWSRDS-Method3-UsingDMS/SC=
+T"><u>Method 3 - Using DMS/SCT</u></h1>
+<p><u><br></u></p>
+<h1 id=3D"DBA-OracletoOraclemigrationfromOnPremtoAWSRDS-Pre-Requisites.1"><=
+u>Pre-Requisites</u></h1>
+<ul>
+<li>DMS(Data Migration Services) enabled on target AWS VPC</li>
+<li>Connectivity of DMS to source (on-prem) instance and target AWS RDS ins=
+tance</li>
+<li>Build DMS replication instance (AWS EC2) on target AWS VPC</li>
+<li>Availability of a windows node with SCT (Schema Conversion Tool) instal=
+led &amp; configured</li>
+<li>DBA Credentials to login to target (RDS) and source (on-prem) DB instan=
+ce</li>
+<li>Validate all required features and constructs are in place at the targe=
+t RDS instance<br><br></li>
+</ul>
+<p>Step 1. Run SCT tool against source (On-Prem) DB schema</p>
+<p>Step 2. Review and analyze the SCT report</p>
+<p>Step 3. Evaluate the compatibility of source (on-prem) database with tar=
+get AWS RDS instance base on SCT report</p>
+<p>Step 4. Use SCT to migrate schema objects and code from source (on-prem)=
+ database with target AWS RDS instance</p>
+<p>Step 5. Use DMS to migrate schema data from&nbsp;source (on-prem) databa=
+se with target AWS RDS instance<br>Step 6.&nbsp;Validate object count and s=
+tatus on target AWS RDS instance<br>Step 7. Check with application team to =
+verify the data migration was successful</p>
+<p><u>Reference Documents :</u></p>
+<p>SCT Usage Guide =E2=86=92&nbsp;<a href=3D"/devspace/display/ZSHXA/DBA+-+=
+AWS+SCT+Usage+Guide">DBA - AWS SCT Usage Guide</a></p>
+<p>Example DMS migration from Oracle to PostgreSQL&nbsp;=E2=86=92&nbsp;<a h=
+ref=3D"/devspace/display/ZSHXA/DBA+-+AWS+DMS+Migration+Oracle+to+Postgres">=
+DBA - AWS DMS Migration Oracle to Postgre</a>SQL</p>
+    </div>
+</body>
+</html>
+------=_Part_272953_1773889600.1546507138055--
